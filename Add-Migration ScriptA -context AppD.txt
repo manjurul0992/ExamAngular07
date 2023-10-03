@@ -1,0 +1,22 @@
+Add-Migration ScriptA -context AppDbContext
+Add-Migration ScriptA -context CandidateDbContext
+update-database -context AppDbContext
+update-database -context CandidateDbContext
+ng g c auth/login
+ng g c components/confirm-dialog
+ng g c components/master
+ng g c components/master-edit
+ng g c components/master-view
+ng g c components/nav-bar
+ng g guard guards/auth-guard
+ng g cl models/candidates
+ng g cl models/candidate-skills
+ng g cl models/login-model
+ng g cl models/skills
+ng g cl models/user-model
+ng g s services/auth/login
+ng g s services/auth/user
+ng g s services/common/notify
+ng g s services/data
+ng g s services/notify
+ng generate interceptor jwt-interceptor
